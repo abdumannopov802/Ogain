@@ -16,7 +16,7 @@
     --------------------*/
     $(window).on('load', function () {
         $(".loader").fadeOut();
-        $("#preloder").delay(200).fadeOut("slow");
+        // $("#preloder").delay(200).fadeOut("slow");
 
         /*------------------
             Gallery filter
@@ -222,3 +222,22 @@
     });
 
 })(jQuery);
+
+$(function() {
+    var min = 10; // Minimum value
+    var max = 540; // Maximum value
+
+    $(".price-range").slider({
+        range: true,
+        min: min,
+        max: max,
+        values: [min, max],
+        slide: function(event, ui) {
+            $("#minamount").val(ui.values[0]);
+            $("#maxamount").val(ui.values[1]);
+        }
+    });
+
+    $("#minamount").val($(".price-range").slider("values", 0));
+    $("#maxamount").val($(".price-range").slider("values", 1));
+});

@@ -131,3 +131,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+# PORT = 8001
+
+# import os
+# from django.core.management import execute_from_command_line
+
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myproject.settings") 
+
+# execute_from_command_line(["manage.py", "runserver", "8002"])
